@@ -9,7 +9,6 @@ async function main() {
 
     // List all mailboxes
     await imapManager.listMailboxes();
-    console.log("");
 
     // Get INBOX status
     await imapManager.getMailboxStatus("INBOX");

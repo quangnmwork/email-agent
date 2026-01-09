@@ -21,7 +21,7 @@ export class ImapManager {
         pass: PASSWORD,
       },
       secure: true,
-      logger: false, // Tắt log debug, set true nếu cần debug
+      logger: false,
     });
 
     // Listen for close event
@@ -43,7 +43,6 @@ export class ImapManager {
     return ImapManager.instance;
   }
 
-  // ImapFlow.connect() trả về Promise - đơn giản hơn nhiều!
   public async connect(): Promise<void> {
     if (this.isConnected) {
       console.log("✅ Already connected");
@@ -67,7 +66,7 @@ export class ImapManager {
     const mailboxes = await this.imap.list();
     console.log("📬 Mailboxes:");
     for (const mailbox of mailboxes) {
-      console.log(`  - ${mailbox.path}`);
+      console.log(` Mailbox: ${mailbox.path}`);
     }
   }
 
