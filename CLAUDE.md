@@ -1,0 +1,1 @@
+- the subagents are @agent/.claude/agents

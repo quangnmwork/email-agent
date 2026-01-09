@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "npx tsx watch server/index.ts",
+    "start": "npx tsx server/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
@@ -14,13 +16,20 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@hono/node-server": "^1.19.7",
     "@prisma/adapter-better-sqlite3": "^7.2.0",
     "@prisma/adapter-libsql": "^7.2.0",
+    "dotenv": "^17.2.3",
+    "hono": "^4.11.3",
     "imapflow": "^1.2.4",
     "node-imap": "^0.9.6",
-    "prisma": "^7.2.0"
+    "prisma": "^7.2.0",
+    "socket.io": "^4.8.3"
   },
   "devDependencies": {
-    "@types/node-imap": "^0.9.3"
+    "@types/node": "^25.0.3",
+    "@types/node-imap": "^0.9.3",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
   }
 }
